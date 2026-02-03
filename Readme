@@ -1,0 +1,48 @@
+**IconFix_AVHIRAL** est un petit outil Windows (console) qui corrige les problèmes d’icônes de raccourcis qui “changent” (icône dossier, icône générique, etc.). Il purge le cache d’icônes Windows, répare les raccourcis `.lnk` dont l’icône est invalide, puis relance Explorer.
+
+---
+
+## Ce que fait l’outil
+
+1. Arrête **Explorer** (`explorer.exe`)
+2. Supprime les caches :
+   - `iconcache*`
+   - `thumbcache*`
+3. Analyse les raccourcis `.lnk` sur :
+   - **Bureau utilisateur**
+   - **Bureau public**
+4. Si l’icône d’un raccourci est invalide et que la cible existe :  
+   ✅ l’icône est remise sur **l’exécutable cible** (`TargetPath,0`)
+5. Redémarre **Explorer**
+6. Affiche un résumé dans la console (**✅ Corrigé**)
+
+---
+
+## Utilisation
+
+1. Clique droit sur `IconFix_AVHIRAL.exe` → **Exécuter en tant qu’administrateur**
+2. Laisse la console aller jusqu’au message final : **✅ Corrigé.**
+3. Tes icônes de raccourcis doivent redevenir stables.
+
+---
+
+## Recommandations
+
+- Fermer les applications ouvertes sur le Bureau si possible (Explorer est redémarré).
+- Si le problème revient, relancer l’outil (c’est rapide).
+
+---
+
+## Sécurité / Remarques
+
+- L’outil ne touche pas à tes fichiers personnels.
+- Il supprime uniquement des **fichiers cache Windows standard** et ajuste certains `.lnk` **uniquement si leur icône est invalide**.
+- Les raccourcis cassés (cible inexistante) sont ignorés.
+
+---
+
+## Auteur
+
+AVHIRAL 
+
+DONS PAYPAL : https://www.paypal.com/donate/?hosted_button_id=FSX7RHUT4BDRY
